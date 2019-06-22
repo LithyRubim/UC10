@@ -1,21 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package loja;
 
-/**
- *
- * @author Lithy
- */
-public class Loja {
 
-    /**
-     * @param args the command line arguments
-     */
+public class Loja {
     public static void main(String[] args) {
-        // TODO code application logic here
+        Roupas camiseta = new Roupas("camiseta",29.9f,"feminino","GG",2);
+        //camiseta.status();
+        
+        Roupas calça = new Roupas("calça jeans",35.99f,"masculino","40",0);
+        calça.status();
+        calça.trocar();
+        
     }
-    
 }

@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package loja;
 
-/**
- *
- * @author Lithy
- */
-public class Empresa {
+
+public abstract class Empresa implements Vendedor {
+    protected String produto;
+    protected float valor;
+    protected int estoque;
     
+    public Empresa(){
+        super();
+    }
 }
