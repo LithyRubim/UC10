@@ -15,7 +15,7 @@ public class Loja {
         //celular.comprar();
         
         Bazar pote = new Bazar("pote de plástico",1.75f,false,25);
-        pote.comprar();
+        pote.status();
         
     }
 }

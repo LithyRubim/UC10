@@ -67,11 +67,22 @@ public class Eletronicos extends Empresa {
 
     @Override
     public void trocar() {
-        
+        System.out.println("TROCAR");
+       if(this.getEstoque()== 0){
+           System.out.println("Não é possível trocar a mercadoria. Produto fora de estoque.");
+       }else{
+           DecimalFormat df = new DecimalFormat("#,###.00");
+           this.setEstoque(this.getEstoque()-1);
+           System.out.println("Você deseja trocar "+this.getProduto()+""+this.getVoltagem()+" de R$ "+df.format(this.getValor()));
+           System.out.println("Troca realizada com sucesso.");
+           System.out.println("Restam "+this.getEstoque()+" unidades no estoque.");
+       }        
     }
 
     @Override
     public void provar() {
+        System.out.println("PROVAR");
+        System.out.println("Não é possível experimentar Eletrônicos.");
     }
 
     @Override

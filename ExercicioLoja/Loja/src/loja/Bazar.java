@@ -86,10 +86,24 @@ public class Bazar extends Empresa {
 
     @Override
     public void provar() {
+        System.out.println("PROVAR");
+        System.out.println("Não é possivel provar artigos de bazar!");
     }
 
     @Override
     public void status() {
+        System.out.println("###########################");
+        System.out.println("Produto: "+ this.getProduto());
+        DecimalFormat df = new DecimalFormat("#,###.00");
+        System.out.println("Valor: R$ "+ df.format(this.getValor()));
+      if(this.isGarantia()== false){
+          System.out.println("O produto não possui garantia.");
+      }else{
+          System.out.println("O produto possui garantia de fábrica.");
+      }
+        System.out.println("Quantidade no estoque: "+this.getEstoque()+ " unidades.");
+        System.out.println("############################");
+        System.out.println("");
     }
     
 }
