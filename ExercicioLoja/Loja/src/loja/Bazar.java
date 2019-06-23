@@ -69,8 +69,20 @@ public class Bazar extends Empresa {
 
     @Override
     public void trocar() {
-        
+        System.out.println("TROCAR");
+      if(this.getEstoque()== 0){
+        System.out.println("Não é possível trocar. Produto fora de estoque.");
+        System.out.println("######################");
+        System.out.println("");
+    }else{
+        this.setEstoque(this.getEstoque()-1);
+        DecimalFormat df = new DecimalFormat("#,##.00");
+        System.out.println("Você deseja trocar "+ this.getProduto()+" de R$ "+ df.format(this.getValor()));
+        System.out.println("Troca realizada com sucesso.");
+        System.out.println("Restam "+ this.getEstoque()+ " unidades no estoque.");
+      }
     }
+        
 
     @Override
     public void provar() {
