@@ -59,7 +59,7 @@ public class Bazar extends Empresa {
       }else{
           this.setEstoque(this.getEstoque()-1);
           DecimalFormat df = new DecimalFormat("#,##.00"); 
-          System.out.println("Você comprou "+this.getProduto()+" por R$ "+this.getValor());
+          System.out.println("Você comprou "+this.getProduto()+" por R$ "+ df.format(this.getValor()));
           System.out.println("Obrigado pela compra!");
           System.out.println("Restam "+this.getEstoque()+" unidades no estoque.");
           System.out.println("###################");

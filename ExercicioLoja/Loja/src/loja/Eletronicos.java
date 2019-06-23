@@ -1,6 +1,8 @@
 
 package loja;
 
+import java.text.DecimalFormat;
+
 
 public class Eletronicos extends Empresa {
     private String voltagem;
@@ -49,10 +51,23 @@ public class Eletronicos extends Empresa {
 
     @Override
     public void comprar() {
+        System.out.println("COMPRAR");
+       if(this.getEstoque()== 0){
+           System.out.println("Não é possível comprar. Este produto está fora de estoque.");
+       }else{
+           this.setEstoque(this.getEstoque()-1);
+           DecimalFormat df = new DecimalFormat("#,##0.00");
+           System.out.println("Você comprou "+this.getProduto() +" de  "+this.getVoltagem()+" por R$ "+ df.format(this.getValor()));
+           System.out.println("Obrigado pela compra!");
+           System.out.println("Restam " +this.getEstoque()+ " unidades no estoque.");
+           System.out.println("###########################");
+           System.out.println("");
+       }
     }
 
     @Override
     public void trocar() {
+        
     }
 
     @Override
@@ -61,6 +76,14 @@ public class Eletronicos extends Empresa {
 
     @Override
     public void status() {
+        System.out.println("##########################");
+        System.out.println("Produto: "+ this.getProduto());
+        DecimalFormat df = new DecimalFormat("#,##0.00");
+        System.out.println("Valor:R$ "+ df.format(this.getValor()));
+        System.out.println("Voltagem: "+this.getVoltagem());
+        System.out.println("Quantidade em estoque: "+this.getEstoque()+ " unidades.");
+        System.out.println("###########################");
+        System.out.println("");
     }
     
 }
