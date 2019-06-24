@@ -14,8 +14,9 @@ public class Loja {
         //celular.status();
         //celular.comprar();
         
-        Bazar pote = new Bazar("pote de plástico",1.75f,false,25);
-        pote.status();
+        //Bazar pote = new Bazar("pote de plástico",1.75f,false,25);
         
+        Bazar cortador = new Bazar("Cortador de Grama",129.9f,true,3);
+        cortador.status();
     }
 }
